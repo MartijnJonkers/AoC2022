@@ -1,4 +1,8 @@
-input = open("input.txt").read().strip()
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
+
+import aoc
+input = aoc.load("input.txt").read().strip()
 
 for i in range(2):                              # part 1 and 2
   score = 0
