@@ -2,7 +2,7 @@ import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
 import aoc
-lines = aoc.load("input.txt").readlines()
+lines = aoc.loadlines()
 
 import re
 
@@ -15,7 +15,7 @@ aoc.result(p1 = score)
 
 score = 0
 for i in range(0,len(lines), 3):
-  match1 = re.findall("[" + lines[i].strip() + "]", lines[i+1].strip() )
-  match2 = ord(re.findall("[" + "".join(match1) + "]", lines[i+2].strip())[0])
+  match1 = re.findall("[" + lines[i] + "]", lines[i+1])
+  match2 = ord(re.findall("[" + "".join(match1) + "]", lines[i+2])[0])
   score += (match2 - ord('a')) + 1 if (match2 >= ord('a')) else ((match2 - ord('A')) + 27)
 aoc.result(p2 = score)
