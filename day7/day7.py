@@ -6,7 +6,7 @@
 #       _files : files with sizes
 #       _size  : size of files and folders combined
 #       <subfolders> :
-structure = {"/":{"_files":{}, "_size":0}}
+structure = {"/":{"_files":{}, "_size":0}}          # the full folder structure
 cur_ref = structure["/"]                            # points to the current folder
 cur_path = [structure["/"]]                         # current path
 
